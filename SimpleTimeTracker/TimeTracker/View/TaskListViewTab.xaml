@@ -9,7 +9,11 @@
         Header="{Binding Title}">
     <Grid>
         <DockPanel LastChildFill="True">
-            <ListView DockPanel.Dock="Left" Tag="TaskList"/>
+            <StackPanel Orientation="Vertical">
+                <Button Content="+"/>
+                <ListView DockPanel.Dock="Left" Tag="TaskList"/>    
+            </StackPanel>
+            
             <StackPanel Tag="SessionList">
                 
             </StackPanel>

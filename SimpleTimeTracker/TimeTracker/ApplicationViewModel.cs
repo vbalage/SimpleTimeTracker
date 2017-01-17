@@ -33,6 +33,8 @@ namespace TimeTracker
             };
 
             TabItems.Add(new TaskListViewTab(AppParams));
+            var newTaskTab = new NewTaskTab(new NewTaskView());
+            TabItems.Add(newTaskTab);
 
             SelectedTab = TabItems[0];            
         }
