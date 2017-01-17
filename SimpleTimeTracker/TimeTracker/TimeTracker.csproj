@@ -55,6 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IApplicationViewModel.cs" />
+    <Compile Include="Interface\IComponent.cs" />
+    <Compile Include="Interface\ModelBase.cs" />
+    <Compile Include="ITabItem.cs" />
+    <Compile Include="Model\ApplicationParameters.cs" />
+    <Compile Include="Model\DataModel.cs" />
+    <Compile Include="Interface\IDataModel.cs" />
+    <Compile Include="ViewModel\TaskListViewTabViewModel.cs" />
+    <Compile Include="View\TaskListViewTab.xaml.cs">
+      <DependentUpon>TaskListViewTab.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,11 +79,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\TaskListViewTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ISession.cs" />
-    <Compile Include="Model\ITask.cs" />
-    <Compile Include="Model\ITimer.cs" />
+    <Compile Include="Interface\ISession.cs" />
+    <Compile Include="Interface\ITask.cs" />
+    <Compile Include="Interface\ITimer.cs" />
     <Compile Include="Model\NotifyBase.cs" />
     <Compile Include="Model\Session.cs" />
     <Compile Include="Model\StopwatchTimer.cs" />
@@ -103,10 +118,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
