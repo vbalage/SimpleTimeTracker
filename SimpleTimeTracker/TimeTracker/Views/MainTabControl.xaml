@@ -1,0 +1,23 @@
+﻿<TabControl x:Class="TimeTracker.Views.MainTabControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:vm="clr-namespace:TimeTracker.ViewModels"
+    xmlns:local="clr-namespace:TimeTracker.Views"
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="300"
+    ItemsSource="{Binding TabViewModels}"
+    SelectedItem="{Binding SelectedTabViewModel}">
+    <TabControl.Resources>
+        <DataTemplate DataType="{x:Type vm:NewTaskViewModel}">
+            <local:NewTaskView />
+        </DataTemplate>
+    </TabControl.Resources>
+
+    <TabControl.ItemContainerStyle>
+        <Style TargetType="TabItem">
+            <Setter Property="Header" Value="{Binding Header}" />
+        </Style>
+    </TabControl.ItemContainerStyle>
+</TabControl>

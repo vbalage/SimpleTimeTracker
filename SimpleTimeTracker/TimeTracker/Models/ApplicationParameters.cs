@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TimeTracker.Interface;
 
-namespace TimeTracker.Model
+namespace TimeTracker.Models
 {
     public class ApplicationParameters : IApplicationParameters
     {

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace TimeTracker
+namespace TimeTracker.ViewModels.Commands
 {
     public class RelayCommand : ICommand
     {

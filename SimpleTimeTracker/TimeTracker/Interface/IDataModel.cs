@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using TimeTracker.Models.Interfaces;
 
 namespace TimeTracker.Interface
 {

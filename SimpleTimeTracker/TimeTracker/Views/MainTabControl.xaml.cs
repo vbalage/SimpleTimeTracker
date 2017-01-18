@@ -12,18 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeTracker.ViewModels;
 
-namespace TimeTracker.View
+namespace TimeTracker.Views
 {
     /// <summary>
-    /// Interaction logic for NewTask.xaml
+    /// Interaction logic for MainTabControl.xaml
     /// </summary>
-    public partial class NewTaskTab : ITabItem
+    public partial class MainTabControl : TabControl
     {
-        public NewTaskTab(UserControl contentControl)
+        public MainTabControl()
         {
-            base.DataContext = contentControl;
             InitializeComponent();
+            DataContext = new MainTabControlViewModel();
         }
     }
 }

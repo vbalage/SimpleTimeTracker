@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using TimeTracker.Interface;
 
-namespace TimeTracker.Interface
+namespace TimeTracker.Models.Interfaces
 {
     public interface ITask
     {

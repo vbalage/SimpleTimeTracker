@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeTracker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Simple Time Tracker" Height="350" Width="525">
     <DockPanel LastChildFill="True">
         
         <Menu DockPanel.Dock="Top">
@@ -21,8 +21,7 @@
         </StatusBar>
 
         <Grid>
-            <TabControl ItemsSource="{Binding TabItems}"
-                        SelectedItem="{Binding SelectedTab}"/>
+            <ContentPresenter Content="{Binding}"/>
         </Grid>
         
     </DockPanel>

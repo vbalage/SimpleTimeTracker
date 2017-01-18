@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using TimeTracker.Interface;
+using TimeTracker.Models.Interfaces;
 
-namespace TimeTracker.Model
+namespace TimeTracker.Models
 {
     internal class Session : NotifyBase, ISession
     {

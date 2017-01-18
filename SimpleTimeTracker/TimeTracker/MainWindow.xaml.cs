@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeTracker.Views;
 
 namespace TimeTracker
 {
@@ -23,7 +24,7 @@ namespace TimeTracker
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ApplicationViewModel();
+            DataContext = new MainTabControl();
         }
     }
 }

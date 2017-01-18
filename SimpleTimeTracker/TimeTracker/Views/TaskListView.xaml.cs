@@ -12,26 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TimeTracker.ViewModel;
 
-namespace TimeTracker.View
+namespace TimeTracker.Views
 {
     /// <summary>
-    /// Interaction logic for TaskList.xaml
+    /// Interaction logic for TaskListView.xaml
     /// </summary>
-    public partial class TaskListViewTab : ITabItem
+    public partial class TaskListView : UserControl
     {
-        private IApplicationParameters _app;
-
-        public TaskListViewTab(IApplicationParameters app)
+        public TaskListView()
         {
-            if (app == null)
-                throw new ArgumentNullException(nameof(app));
-
-            _app = app;
-
             InitializeComponent();
-            DataContext = new TaskListViewTabViewModel(_app);
         }
     }
 }

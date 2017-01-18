@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TimeTracker.Interface
+namespace TimeTracker.Models.Interfaces
 {
     public interface ISession
     {
