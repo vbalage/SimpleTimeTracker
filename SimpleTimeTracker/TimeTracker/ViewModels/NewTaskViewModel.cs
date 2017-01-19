@@ -1,4 +1,7 @@
-﻿using TimeTracker.DataTypes;
+﻿using System;
+using System.Data.Entity;
+using TimeTracker.DataSources;
+using TimeTracker.DataTypes;
 using TimeTracker.DataTypes.Interfaces;
 using TimeTracker.ViewModels.Interfaces;
 
@@ -9,9 +12,12 @@ namespace TimeTracker.ViewModels
         public string Header { get; set; }
         public ITask Task { get; set; }
 
-        public NewTaskViewModel()
+        public NewTaskViewModel(TimeTrackerContext dbContext)
         {
-            Task = new ProjectTask();
+            if(dbContext == null)
+                throw new ArgumentNullException(nameof(dbContext));
+
+            Task = new Task();
         }
     }
 }

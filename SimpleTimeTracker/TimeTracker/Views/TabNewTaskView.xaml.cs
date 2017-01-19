@@ -5,9 +5,9 @@ namespace TimeTracker.Views
     /// <summary>
     /// Interaction logic for NewTaskView.xaml
     /// </summary>
-    public partial class NewTaskView : UserControl
+    public partial class TabNewTaskView : UserControl
     {
-        public NewTaskView()
+        public TabNewTaskView()
         {
             InitializeComponent();
         }

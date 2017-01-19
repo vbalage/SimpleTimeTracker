@@ -11,7 +11,10 @@
     SelectedItem="{Binding SelectedTabViewModel}">
     <TabControl.Resources>
         <DataTemplate DataType="{x:Type vm:NewTaskViewModel}">
-            <local:NewTaskView />
+            <local:TabNewTaskView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:TaskListViewModel}">
+            <local:TabTaskListView/>
         </DataTemplate>
     </TabControl.Resources>
 

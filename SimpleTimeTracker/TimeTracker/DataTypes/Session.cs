@@ -1,13 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using TimeTracker.DataTypes.Interfaces;
 using TimeTracker.Models;
 using TimeTracker.Utils.Interfaces;
 
 namespace TimeTracker.DataTypes
 {
-    internal class Session : NotifyBase, ISession
-    {        
-        private ITimer _timer;
+    public class Session : NotifyBase, ISession
+    {
+        public ITimer Timer { get; }
         public ITask ParentTask { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
@@ -24,6 +25,7 @@ namespace TimeTracker.DataTypes
         }
 
         private TimeSpan _length;
+        [NotMapped]
         public TimeSpan Length
         {
             get { return _length; }
@@ -40,17 +42,22 @@ namespace TimeTracker.DataTypes
             if (timer == null)
                 throw new ArgumentNullException(nameof(timer));
 
-            _timer = timer;
+            Timer = timer;
+        }
+
+        public Session()
+        {
+            
         }
 
         public void Start()
         {
-            _timer.Start();
+            Timer.Start();
         }
 
         public void Pause()
         {
-            _timer.Stop();
+            Timer.Stop();
         }
 
         public void Stop()
@@ -59,7 +66,7 @@ namespace TimeTracker.DataTypes
                 Stop();
 
             HasEnded = true;
-            Length = _timer.Elapsed;
+            Length = Timer.Elapsed;
         }
     }
 }

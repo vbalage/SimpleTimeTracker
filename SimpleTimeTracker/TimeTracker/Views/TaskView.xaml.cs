@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TimeTracker.Views;
 
-namespace TimeTracker
+namespace TimeTracker.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TaskView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TaskView : UserControl
     {
-        public MainWindow()
+        public TaskView()
         {
             InitializeComponent();
-            DataContext = new MainTabControl();
         }
     }
 }

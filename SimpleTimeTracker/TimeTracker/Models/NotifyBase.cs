@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TimeTracker.Models
 {
-    internal abstract class NotifyBase : INotifyPropertyChanged
+    public abstract class NotifyBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

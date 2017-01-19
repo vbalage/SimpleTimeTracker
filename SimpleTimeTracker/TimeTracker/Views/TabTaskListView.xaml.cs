@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TimeTracker.Views
 {
     /// <summary>
-    /// Interaction logic for TaskListView.xaml
+    /// Interaction logic for TabTaskListView.xaml
     /// </summary>
-    public partial class TaskListView : UserControl
+    public partial class TabTaskListView : UserControl
     {
-        public TaskListView()
+        public TabTaskListView()
         {
             InitializeComponent();
         }

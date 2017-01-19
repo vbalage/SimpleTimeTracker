@@ -5,7 +5,7 @@ using TimeTracker.Models;
 
 namespace TimeTracker.DataTypes
 {
-    internal class ProjectTask : NotifyBase, ITask
+    public class Task : NotifyBase, ITask
     {
         private string _name;
 
@@ -23,7 +23,7 @@ namespace TimeTracker.DataTypes
 
         public long Id { get; protected set; }
 
-        public ProjectTask()
+        public Task()
         {
             Name = string.Empty;
             Sessions = new List<ISession>();

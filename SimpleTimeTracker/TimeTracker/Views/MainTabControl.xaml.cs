@@ -24,7 +24,6 @@ namespace TimeTracker.Views
         public MainTabControl()
         {
             InitializeComponent();
-            DataContext = new MainTabControlViewModel();
         }
     }
 }
