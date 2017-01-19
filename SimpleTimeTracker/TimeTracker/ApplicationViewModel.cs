@@ -4,11 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TimeTracker.Interface;
 using TimeTracker.Models;
-using TimeTracker.ViewModels;
-using TimeTracker.ViewModels.Interfaces;
-using TimeTracker.Views;
 
 namespace TimeTracker
 {

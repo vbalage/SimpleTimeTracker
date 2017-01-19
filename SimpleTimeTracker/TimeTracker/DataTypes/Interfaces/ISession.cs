@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TimeTracker.Models.Interfaces
+namespace TimeTracker.DataTypes.Interfaces
 {
-    public interface ISession
+    public interface ISession : IEntity
     {
         string Description { get; set; }
         ITask ParentTask { get; set; }

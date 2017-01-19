@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TimeTracker.Models.Interfaces
+namespace TimeTracker.Utils.Interfaces
 {
     interface ITimer
     {

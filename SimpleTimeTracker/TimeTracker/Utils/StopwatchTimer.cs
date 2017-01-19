@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TimeTracker.Interface;
-using TimeTracker.Models.Interfaces;
+using TimeTracker.Utils.Interfaces;
 
-namespace TimeTracker.Models
+namespace TimeTracker.Utils
 {
     internal class StopwatchTimer : Stopwatch, ITimer
     {

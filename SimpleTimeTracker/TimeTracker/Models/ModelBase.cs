@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeTracker.DataTypes.Interfaces;
 
-namespace TimeTracker.Interface
+namespace TimeTracker.Models
 {
     internal abstract class ModelBase : IComponent
     {

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TimeTracker.Interface;
-using TimeTracker.Models.Interfaces;
+using TimeTracker.DataTypes.Interfaces;
+using TimeTracker.Models;
 
-namespace TimeTracker.Models
+namespace TimeTracker.DataTypes
 {
     internal class ProjectTask : NotifyBase, ITask
     {
@@ -23,6 +20,8 @@ namespace TimeTracker.Models
         }
 
         public IList<ISession> Sessions { get; set; }
+
+        public long Id { get; protected set; }
 
         public ProjectTask()
         {

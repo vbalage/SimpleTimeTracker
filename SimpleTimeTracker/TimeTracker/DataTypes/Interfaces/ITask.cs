@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using TimeTracker.Interface;
 
-namespace TimeTracker.Models.Interfaces
+namespace TimeTracker.DataTypes.Interfaces
 {
-    public interface ITask
+    public interface ITask : IEntity
     {
         string Name { get; set; }
         IList<ISession> Sessions { get; set; }

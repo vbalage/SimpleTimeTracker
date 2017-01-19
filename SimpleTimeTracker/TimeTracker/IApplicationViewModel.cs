@@ -1,4 +1,4 @@
-﻿using TimeTracker.Interface;
+﻿using TimeTracker.DataTypes.Interfaces;
 
 namespace TimeTracker
 {

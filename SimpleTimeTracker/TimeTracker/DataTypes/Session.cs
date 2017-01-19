@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
-using TimeTracker.Interface;
-using TimeTracker.Models.Interfaces;
+using TimeTracker.DataTypes.Interfaces;
+using TimeTracker.Models;
+using TimeTracker.Utils.Interfaces;
 
-namespace TimeTracker.Models
+namespace TimeTracker.DataTypes
 {
     internal class Session : NotifyBase, ISession
-    {
+    {        
         private ITimer _timer;
         public ITask ParentTask { get; set; }
         public DateTime StartTime { get; set; }
@@ -38,6 +33,7 @@ namespace TimeTracker.Models
             }
         }
 
+        public long Id { get; protected set; }
 
         public Session(ITimer timer)
         {

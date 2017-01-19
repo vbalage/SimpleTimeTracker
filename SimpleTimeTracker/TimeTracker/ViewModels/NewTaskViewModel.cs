@@ -1,6 +1,5 @@
-﻿using System.Threading.Tasks;
-using TimeTracker.Models;
-using TimeTracker.Models.Interfaces;
+﻿using TimeTracker.DataTypes;
+using TimeTracker.DataTypes.Interfaces;
 using TimeTracker.ViewModels.Interfaces;
 
 namespace TimeTracker.ViewModels

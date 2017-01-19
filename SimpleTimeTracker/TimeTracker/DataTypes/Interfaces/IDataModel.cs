@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using TimeTracker.Models.Interfaces;
 
-namespace TimeTracker.Interface
+namespace TimeTracker.DataTypes.Interfaces
 {
     public interface IDataModel
     {
