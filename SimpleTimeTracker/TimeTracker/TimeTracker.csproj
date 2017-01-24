@@ -92,13 +92,10 @@
     <Compile Include="DataSources\SessionRepository.cs" />
     <Compile Include="DataSources\TaskRepository.cs" />
     <Compile Include="DataSources\TimeTrackerContext.cs" />
-    <Compile Include="DataTypes\BaseClasses\EntityBase.cs" />
     <Compile Include="DataTypes\Interfaces\IEntity.cs" />
     <Compile Include="DataTypes\Interfaces\IComponent.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="ViewModels\Interfaces\ITabViewModel.cs" />
-    <Compile Include="Models\DataModel.cs" />
-    <Compile Include="DataTypes\Interfaces\IDataModel.cs" />
     <Compile Include="ViewModels\Commands\RelayCommand.cs" />
     <Compile Include="ViewModels\MainTabControlViewModel.cs" />
     <Compile Include="ViewModels\NewTaskViewModel.cs" />

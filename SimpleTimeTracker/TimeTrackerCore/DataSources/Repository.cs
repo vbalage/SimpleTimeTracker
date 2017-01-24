@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TimeTracker.DataSources.Interfaces;
-using TimeTracker.DataTypes.Interfaces;
+using TimeTracker.Interface.DataSources;
+using TimeTracker.Interface.DataTypes;
 
-namespace TimeTracker.DataSources
+namespace TimeTracker.Core.DataSources
 {
     public class Repository<T> : IRepository<T> where T : IEntity
     {
