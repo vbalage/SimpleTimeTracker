@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using TimeTracker.Utils.Interfaces;
+using TimeTracker.Interface.Utils;
 
 namespace TimeTracker.Core.Utils
 {

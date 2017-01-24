@@ -1,6 +1,5 @@
 ﻿using System;
 using TimeTracker.Interface.DataTypes;
-using TimeTracker.Utils.Interfaces;
 
 namespace TimeTracker.Core.DataTypes
 {
