@@ -37,6 +37,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\IDbContext.cs" />
     <Compile Include="DataSources\IRepository.cs" />
     <Compile Include="DataTypes\IEntity.cs" />
     <Compile Include="DataTypes\ISession.cs" />

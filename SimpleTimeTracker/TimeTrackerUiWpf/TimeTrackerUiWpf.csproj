@@ -53,9 +53,11 @@
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Interfaces\ITabViewModel.cs" />
-    <Compile Include="ViewModels\MainTabControlViewModel.cs" />
-    <Compile Include="ViewModels\NewTaskViewModel.cs" />
-    <Compile Include="ViewModels\TaskListViewModel.cs" />
+    <Compile Include="ViewModels\UserControls\MainTabControlViewModel.cs" />
+    <Compile Include="ViewModels\UserControls\NewTaskViewModel.cs" />
+    <Compile Include="ViewModels\SessionViewModel.cs" />
+    <Compile Include="ViewModels\UserControls\TaskListViewModel.cs" />
+    <Compile Include="ViewModels\TaskViewModel.cs" />
     <Compile Include="Views\MainTabControl.xaml.cs">
       <DependentUpon>MainTabControl.xaml</DependentUpon>
     </Compile>
@@ -71,10 +73,6 @@
     <Compile Include="Views\TaskView.xaml.cs">
       <DependentUpon>TaskView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -82,10 +80,6 @@
     <Compile Include="BaseClasses\ModelBase.cs" />
     <Compile Include="BaseClasses\NotifyBase.cs" />
     <Compile Include="Interfaces\IComponent.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="Views\MainTabControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -108,8 +102,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ModelBase.cs" />
-    <Compile Include="Models\NotifyBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

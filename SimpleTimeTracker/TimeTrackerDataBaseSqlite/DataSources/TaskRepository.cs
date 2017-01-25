@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using TimeTracker.Interface.DataSources;
 using TimeTracker.Interface.DataTypes;
 
@@ -6,29 +8,23 @@ namespace TimeTrackerDataBaseSqlite.DataSources
 {
     public class TaskRepository : GenericRepository<ITask>
     {
-        private SqLiteContext _dbContext;
-
-        public TaskRepository(SqLiteContext dbContext)
+        public TaskRepository(DbSet<ITask> dbSet) : base(dbSet)
         {
-            if(dbContext == null)
-                throw new ArgumentNullException(nameof(dbContext));
-
-            _dbContext = dbContext;
         }
 
-        public override void Create(ITask entity)
+        public override void Add(ITask entity)
         {
-            throw new NotImplementedException();
+            DbSet.Add(entity);
         }
 
         public override void Delete(ITask entity)
         {
-            throw new NotImplementedException();
+            DbSet.Remove(entity);
         }
 
         public override ITask GetById(long id)
         {
-            throw new NotImplementedException();
+            return DbSet.Find(id);
         }
 
         public override void Update(ITask entity)

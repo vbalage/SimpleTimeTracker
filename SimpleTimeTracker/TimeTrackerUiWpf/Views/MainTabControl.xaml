@@ -5,15 +5,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:views="clr-namespace:TimeTrackerUiWpf.Views"
     xmlns:vm="clr-namespace:TimeTrackerUiWpf.ViewModels"
+    xmlns:userControls="clr-namespace:TimeTrackerUiWpf.ViewModels.UserControls"
     mc:Ignorable="d" 
     d:DesignHeight="300" d:DesignWidth="300"
     ItemsSource="{Binding TabViewModels}"
     SelectedItem="{Binding SelectedTabViewModel}">
     <TabControl.Resources>
-        <DataTemplate DataType="{x:Type vm:NewTaskViewModel}">
+        <DataTemplate DataType="{x:Type userControls:NewTaskViewModel}">
             <views:TabNewTaskView />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:TaskListViewModel}">
+        <DataTemplate DataType="{x:Type userControls:TaskListViewModel}">
             <views:TabTaskListView/>
         </DataTemplate>
     </TabControl.Resources>

@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\SqLiteDbContext.cs" />
     <Compile Include="DataSources\GenericRepository.cs" />
     <Compile Include="DataSources\SessionRepository.cs" />
     <Compile Include="DataSources\TaskRepository.cs" />

@@ -2,7 +2,7 @@
 
 namespace TimeTrackerUiWpf.BaseClasses
 {
-    internal abstract class ModelBase : NotifyBase, IComponent
+    public abstract class ModelBase : NotifyBase, IComponent
     {
         public string Name { get; set; }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.Entity;
+using System.Threading;
 using TimeTracker.Interface.DataSources;
 using TimeTracker.Interface.DataTypes;
 
@@ -6,7 +8,11 @@ namespace TimeTrackerDataBaseSqlite.DataSources
 {
     public class SessionRepository : GenericRepository<ISession>
     {
-        public override void Create(ISession entity)
+        public SessionRepository(DbSet<ISession> dbSet) : base(dbSet)
+        {
+        }
+
+        public override void Add(ISession entity)
         {
             throw new NotImplementedException();
         }

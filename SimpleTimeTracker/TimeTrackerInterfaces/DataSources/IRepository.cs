@@ -7,7 +7,7 @@ namespace TimeTracker.Interface.DataSources
     {
         TEntity GetById(long id);
 
-        void Create(TEntity entity);
+        void Add(TEntity entity);
 
         void Delete(TEntity entity);
 
