@@ -17,8 +17,8 @@ namespace TimeTracker.Core.Utils
         }
 
         public void Pause()
-        {
-            throw new NotImplementedException();
+        {            
+            base.Stop();            
         }
     }
 }

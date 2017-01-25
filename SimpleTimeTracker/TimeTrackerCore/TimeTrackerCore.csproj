@@ -40,9 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSources\Repository.cs" />
-    <Compile Include="DataSources\SessionRepository.cs" />
-    <Compile Include="DataSources\TaskRepository.cs" />
     <Compile Include="DataTypes\Session.cs" />
     <Compile Include="DataTypes\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,11 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TimeTrackerInterfaces\TimeTrackerInterfaces.csproj">
-      <Project>{094455c7-20aa-44b2-b887-d7a9b70de38e}</Project>
+      <Project>{094455C7-20AA-44B2-B887-D7A9B70DE38E}</Project>
       <Name>TimeTrackerInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

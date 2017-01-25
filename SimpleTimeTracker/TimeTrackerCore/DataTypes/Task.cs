@@ -6,10 +6,10 @@ namespace TimeTracker.Core.DataTypes
 {
     public class Task : ITask
     {
-        public string Name { get; set; }
-
-        public long SessionId { get; set; }
+        public string Name { get; set; }       
 
         public long Id { get; set; }
+
+        public ICollection<ISession> Sessions { get; set; }
     }
 }

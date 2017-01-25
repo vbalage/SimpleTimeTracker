@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="TimeTrackerUiWpf.Views.TabTaskListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:views="clr-namespace:TimeTrackerUiWpf.Views"
+             xmlns:dataTypes="clr-namespace:TimeTracker.Core.DataTypes;assembly=TimeTrackerCore"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type dataTypes:Task}">
+            <views:TaskView></views:TaskView>
+        </DataTemplate>
+    </UserControl.Resources>
+    
+    <Grid>
+        <ListView ItemsSource="{Binding TaskList}"/>
+    </Grid>
+</UserControl>

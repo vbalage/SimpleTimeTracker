@@ -4,7 +4,7 @@ namespace TimeTracker.Interface.DataTypes
 {
     public interface ISession : IEntity
     {
-        long TaskId { get; set; }
+        ITask ParentTask { get; set; }
 
         string Description { get; set; }
                

@@ -1,17 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker", "TimeTracker\TimeTracker.csproj", "{26D9F18E-3565-476C-8CA6-888DD907F4C9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerCore", "TimeTrackerCore\TimeTrackerCore.csproj", "{C1A0085F-3A56-4FE0-844E-80CFE63798AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerInterfaces", "TimeTrackerInterfaces\TimeTrackerInterfaces.csproj", "{094455C7-20AA-44B2-B887-D7A9B70DE38E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerBaseClasses", "TimeTrackerBaseClasses\TimeTrackerBaseClasses.csproj", "{9315332A-0DF5-4FEE-A269-6A794D7866BF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerDataBaseSqlite", "TimeTrackerDataBaseSqlite\TimeTrackerDataBaseSqlite.csproj", "{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerUiWpf", "TimeTrackerUiWpf\TimeTrackerUiWpf.csproj", "{3D7763EB-46E0-470B-A4A4-D144F987E494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{26D9F18E-3565-476C-8CA6-888DD907F4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26D9F18E-3565-476C-8CA6-888DD907F4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26D9F18E-3565-476C-8CA6-888DD907F4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26D9F18E-3565-476C-8CA6-888DD907F4C9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1A0085F-3A56-4FE0-844E-80CFE63798AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1A0085F-3A56-4FE0-844E-80CFE63798AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1A0085F-3A56-4FE0-844E-80CFE63798AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,14 +25,14 @@ Global
 		{094455C7-20AA-44B2-B887-D7A9B70DE38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{094455C7-20AA-44B2-B887-D7A9B70DE38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{094455C7-20AA-44B2-B887-D7A9B70DE38E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9315332A-0DF5-4FEE-A269-6A794D7866BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9315332A-0DF5-4FEE-A269-6A794D7866BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9315332A-0DF5-4FEE-A269-6A794D7866BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9315332A-0DF5-4FEE-A269-6A794D7866BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D7763EB-46E0-470B-A4A4-D144F987E494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7763EB-46E0-470B-A4A4-D144F987E494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7763EB-46E0-470B-A4A4-D144F987E494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7763EB-46E0-470B-A4A4-D144F987E494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

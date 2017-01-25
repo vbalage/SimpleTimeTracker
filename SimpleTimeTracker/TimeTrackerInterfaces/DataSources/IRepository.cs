@@ -3,14 +3,14 @@ using TimeTracker.Interface.DataTypes;
 
 namespace TimeTracker.Interface.DataSources
 {
-    public interface IRepository<T> where T : IEntity
+    public interface IRepository<TEntity> where TEntity : IEntity
     {
-        T GetById(long id);
+        TEntity GetById(long id);
 
-        void Create(T entity);
+        void Create(TEntity entity);
 
-        void Delete(T entity);
+        void Delete(TEntity entity);
 
-        void Update(T entity);
+        void Update(TEntity entity);
     }
 }

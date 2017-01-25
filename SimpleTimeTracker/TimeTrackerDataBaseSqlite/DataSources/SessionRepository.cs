@@ -2,26 +2,26 @@
 using TimeTracker.Interface.DataSources;
 using TimeTracker.Interface.DataTypes;
 
-namespace TimeTracker.Core.DataSources
+namespace TimeTrackerDataBaseSqlite.DataSources
 {
-    internal class SessionRepository : IRepository<ISession>
+    public class SessionRepository : GenericRepository<ISession>
     {
-        public void Create(ISession entity)
+        public override void Create(ISession entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(ISession entity)
+        public override void Delete(ISession entity)
         {
             throw new NotImplementedException();
         }
 
-        public ISession GetById(long id)
+        public override ISession GetById(long id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(ISession entity)
+        public override void Update(ISession entity)
         {
             throw new NotImplementedException();
         }
