@@ -11,10 +11,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Label Content="Name:"/>
-                <TextBlock Text="{Binding Name}"/>
-            </StackPanel>
+            <TextBlock Text="{Binding Name}"/>
         </Grid>
     </Border>
 </UserControl>

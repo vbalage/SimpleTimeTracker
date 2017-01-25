@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="TimeTrackerUiWpf.Views.Tabs.TaskListTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:views="clr-namespace:TimeTrackerUiWpf.Views"
+             xmlns:viewModels="clr-namespace:TimeTrackerUiWpf.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewModels:TaskViewModel}">
+            <views:TaskView></views:TaskView>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:SessionViewModel}">
+            <Border>
+                <TextBlock Text="{Binding Description}"/>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.Column="0" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask}" SelectionMode="Single"/>
+        <ListView Grid.Column="1" ItemsSource="{Binding Sessions}" SelectedItem="{Binding SelectedSession}"/>
+        <views:SessionView Grid.Column="2" DataContext="{Binding SelectedSession}"></views:SessionView>
+        
+    </Grid>
+</UserControl>

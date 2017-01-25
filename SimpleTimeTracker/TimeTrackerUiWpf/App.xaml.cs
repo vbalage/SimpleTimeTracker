@@ -1,7 +1,9 @@
 ﻿using System.Windows;
+using TimeTrackerUiWpf.Utils;
 using TimeTrackerUiWpf.ViewModels;
 using TimeTrackerUiWpf.ViewModels.UserControls;
 using TimeTrackerUiWpf.Views;
+using TimeTrackerUiWpf.Views.Tabs;
 
 namespace TimeTrackerUiWpf
 {
@@ -22,6 +24,8 @@ namespace TimeTrackerUiWpf
                 Title = "Simple Time Tracker",
                 DataContext = tc
             };
+
+            ResourceUtils.SetLanguageDictionary(this);
 
             window.Show();
         }

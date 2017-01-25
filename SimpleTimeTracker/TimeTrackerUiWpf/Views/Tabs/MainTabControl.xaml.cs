@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TimeTrackerUiWpf.Views
+namespace TimeTrackerUiWpf.Views.Tabs
 {
     /// <summary>
     /// Interaction logic for MainTabControl.xaml

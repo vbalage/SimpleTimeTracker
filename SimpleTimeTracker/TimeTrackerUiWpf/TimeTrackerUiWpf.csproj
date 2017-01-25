@@ -53,22 +53,26 @@
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Interfaces\ITabViewModel.cs" />
+    <Compile Include="Utils\ResourceUtils.cs" />
     <Compile Include="ViewModels\UserControls\MainTabControlViewModel.cs" />
     <Compile Include="ViewModels\UserControls\NewTaskViewModel.cs" />
     <Compile Include="ViewModels\SessionViewModel.cs" />
     <Compile Include="ViewModels\UserControls\TaskListViewModel.cs" />
     <Compile Include="ViewModels\TaskViewModel.cs" />
-    <Compile Include="Views\MainTabControl.xaml.cs">
+    <Compile Include="Views\SessionView.xaml.cs">
+      <DependentUpon>SessionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\MainTabControl.xaml.cs">
       <DependentUpon>MainTabControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TabNewTaskView.xaml.cs">
-      <DependentUpon>TabNewTaskView.xaml</DependentUpon>
+    <Compile Include="Views\Tabs\NewTaskTab.xaml.cs">
+      <DependentUpon>NewTaskTab.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TabTaskListView.xaml.cs">
-      <DependentUpon>TabTaskListView.xaml</DependentUpon>
+    <Compile Include="Views\Tabs\TaskListTab.xaml.cs">
+      <DependentUpon>TaskListTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TaskView.xaml.cs">
       <DependentUpon>TaskView.xaml</DependentUpon>
@@ -80,7 +84,19 @@
     <Compile Include="BaseClasses\ModelBase.cs" />
     <Compile Include="BaseClasses\NotifyBase.cs" />
     <Compile Include="Interfaces\IComponent.cs" />
-    <Page Include="Views\MainTabControl.xaml">
+    <Page Include="Resources\StringResources.hu-HU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\StringResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SessionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tabs\MainTabControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -88,11 +104,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\TabNewTaskView.xaml">
+    <Page Include="Views\Tabs\NewTaskTab.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\TabTaskListView.xaml">
+    <Page Include="Views\Tabs\TaskListTab.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

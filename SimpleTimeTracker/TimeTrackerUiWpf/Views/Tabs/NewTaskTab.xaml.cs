@@ -1,13 +1,13 @@
 ﻿using System.Windows.Controls;
 
-namespace TimeTrackerUiWpf.Views
+namespace TimeTrackerUiWpf.Views.Tabs
 {
     /// <summary>
     /// Interaction logic for NewTaskView.xaml
     /// </summary>
-    public partial class TabNewTaskView : UserControl
+    public partial class NewTaskTab : UserControl
     {
-        public TabNewTaskView()
+        public NewTaskTab()
         {
             InitializeComponent();
         }
