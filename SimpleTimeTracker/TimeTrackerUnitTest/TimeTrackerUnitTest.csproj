@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1F6679B-9FA1-463A-A4C8-8704B4383BFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TimeTrackerUnitTest</RootNamespace>
+    <AssemblyName>TimeTrackerUnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TimeTrackerCore\TimeTrackerCore.csproj">
+      <Project>{C1A0085F-3A56-4FE0-844E-80CFE63798AA}</Project>
+      <Name>TimeTrackerCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimeTrackerInterfaces\TimeTrackerInterfaces.csproj">
+      <Project>{094455C7-20AA-44B2-B887-D7A9B70DE38E}</Project>
+      <Name>TimeTrackerInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimeTrackerDataBaseSqlite\TimeTrackerDataBaseSqlite.csproj">
+      <Project>{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}</Project>
+      <Name>TimeTrackerDataBaseSqlite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
