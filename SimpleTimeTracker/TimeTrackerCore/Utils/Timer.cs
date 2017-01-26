@@ -27,6 +27,10 @@ namespace TimeTracker.Core.Utils
             };
         }
 
+		public Timer(int updateIntervalInMs) : base(updateIntervalInMs)
+		{
+		}
+
         public long ElapsedTimeTicks => _elapsedTimeTicksTicks;
 
         public bool IsRunning => Enabled;
@@ -46,7 +50,7 @@ namespace TimeTracker.Core.Utils
 
         public new void Stop()
         {
-            TimerStarted?.Invoke(this, EventArgs.Empty);
+            TimerStopped?.Invoke(this, EventArgs.Empty);
             base.Stop();
         }
     }

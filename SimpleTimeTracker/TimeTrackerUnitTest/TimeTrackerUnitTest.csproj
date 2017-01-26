@@ -31,7 +31,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="Timer\TimerTests.cs" />
+    <Compile Include="Task\TaskTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -49,6 +50,10 @@
       <Project>{C37B6A22-F556-47F2-AFB7-5A7D5BF229DA}</Project>
       <Name>TimeTrackerDataBaseSqlite</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Timer\" />
+    <Folder Include="Task\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

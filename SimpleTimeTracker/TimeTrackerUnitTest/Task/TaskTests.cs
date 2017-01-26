@@ -5,7 +5,7 @@ using TimeTracker.Core.DataTypes;
 namespace TimeTrackerUnitTest
 {
 	[TestFixture]
-	public class Test
+	public class TaskTests
 	{
 		Task t;
 
