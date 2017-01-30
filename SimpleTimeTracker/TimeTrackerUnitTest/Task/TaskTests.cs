@@ -1,18 +1,16 @@
 ﻿using NUnit.Framework;
-using System;
-using TimeTracker.Core.DataTypes;
 
-namespace TimeTrackerUnitTest
+namespace TimeTrackerUnitTest.Task
 {
 	[TestFixture]
 	public class TaskTests
 	{
-		Task t;
+		TimeTracker.Core.DataTypes.Task t;
 
 		[SetUp]
 		public void Init()
 		{
-			t = new Task();
+			t = new TimeTracker.Core.DataTypes.Task();
 		}
 
 		[Test()]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using TimeTracker.Core.Utils;
 using TimeTracker.Interface.DataTypes;
+using TimeTracker.Interface.Timer;
 using TimeTrackerUiWpf.BaseClasses;
 using TimeTrackerUiWpf.Interfaces;
 
@@ -65,9 +66,13 @@ namespace TimeTrackerUiWpf.ViewModels.UserControls
             }
         }
 
+        private readonly ITimerFactory _timerFactory;
 
-        public TaskListViewModel()
+        public TaskListViewModel(ITimerFactory timerFactory)
         {
+            if(timerFactory == null)
+                throw new ArgumentNullException(nameof(timerFactory));
+
             _tasks = new ObservableCollection<TaskViewModel>();
             _sessions = new ObservableCollection<SessionViewModel>();
 
@@ -77,7 +82,7 @@ namespace TimeTrackerUiWpf.ViewModels.UserControls
                 var task = new TaskViewModel() { Id = i, Name = "Task " + i };
                 for (int j = 0; j < 5; j++)
                 {
-                    var session = new SessionViewModel(new TimerFactory())
+                    var session = new SessionViewModel(timerFactory)
                     {
                         Description = "Session " + j,
                         StartTime = DateTime.Now,

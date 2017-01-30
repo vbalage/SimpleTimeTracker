@@ -1,8 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
-using TimeTracker.Core.Utils;
 
-namespace TimeTrackerUnitTest
+namespace TimeTrackerUnitTest.Timer
 {
 	[TestFixture]
 	public class TimerTests

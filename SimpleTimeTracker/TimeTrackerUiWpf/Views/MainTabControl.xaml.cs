@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TimeTrackerUiWpf.Views.Tabs
+namespace TimeTrackerUiWpf.Views
 {
     /// <summary>
     /// Interaction logic for MainTabControl.xaml
@@ -8,7 +8,7 @@ namespace TimeTrackerUiWpf.Views.Tabs
     public partial class MainTabControl : TabControl
     {
         public MainTabControl()
-        {
+        {            
             InitializeComponent();
         }
     }

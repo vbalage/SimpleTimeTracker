@@ -14,7 +14,7 @@ namespace TimeTrackerUiWpf.ViewModels
             Sessions = new List<ISession>();
         }
 
-        public long Id { get; set; }
+        public Int32 Id { get; set; }
 
         public string Name { get; set; }
 

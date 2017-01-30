@@ -40,7 +40,7 @@ namespace TimeTrackerUiWpf.ViewModels
 
         public DateTime EndTime { get; set; }
 
-        public long Id { get; set; }
+        public Int32 Id { get; set; }
 
         public DateTime StartTime { get; set; }
 
@@ -94,7 +94,7 @@ namespace TimeTrackerUiWpf.ViewModels
 
         public static SessionViewModel Create(ISession session)
         {
-            return new SessionViewModel(new TimerFactory())
+            return new SessionViewModel(new TimerFactory(new SimpleDateProvider()))
             {
                 Id = session.Id,
                 Description = session.Description,

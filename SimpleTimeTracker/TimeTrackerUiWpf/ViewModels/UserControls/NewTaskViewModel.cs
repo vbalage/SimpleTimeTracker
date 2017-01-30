@@ -6,21 +6,21 @@ namespace TimeTrackerUiWpf.ViewModels.UserControls
     internal class NewTaskViewModel : ModelBase, ITabViewModel
     {
         private TaskViewModel _task;
-        public string Header { get; set; }
+        public string Header { get; set; } = "New task";
 
         public TaskViewModel Task
         {
             get { return _task; }
             set
             {
-                _task = value; 
+                _task = value;
                 OnPropertyChanged("Task");
             }
         }
 
         public NewTaskViewModel()
-        {            
-            Task = new TaskViewModel() {Name = "New task"};
+        {
+            Task = new TaskViewModel() { Name = "test task"};
         }
     }
 }

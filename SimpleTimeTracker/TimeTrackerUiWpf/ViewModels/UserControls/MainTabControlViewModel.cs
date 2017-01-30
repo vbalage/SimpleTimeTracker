@@ -1,10 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using TimeTrackerUiWpf.BaseClasses;
 using TimeTrackerUiWpf.Interfaces;
 
 namespace TimeTrackerUiWpf.ViewModels.UserControls
 {
-    internal class MainTabControlViewModel : ModelBase
+    public class MainTabControlViewModel : ModelBase
     {
         private ObservableCollection<ITabViewModel> _tabViewModels;
         private ITabViewModel _selectedTabViewModel;
@@ -29,13 +32,10 @@ namespace TimeTrackerUiWpf.ViewModels.UserControls
             }
         }
 
-        public MainTabControlViewModel()
+        public MainTabControlViewModel(IEnumerable<ITabViewModel> viewModels)
         {
-            TabViewModels = new ObservableCollection<ITabViewModel>
-            {
-                new NewTaskViewModel() {Header = "New task"},
-                new TaskListViewModel() {Header = "Task list"}
-            };
+            TabViewModels = new ObservableCollection<ITabViewModel>(viewModels);
+            SelectedTabViewModel = TabViewModels.FirstOrDefault();
         }
     }
 }
