@@ -5,7 +5,7 @@ using TimeTracker.Interface.DataTypes;
 
 namespace TimeTrackerDataBaseSqlite
 {
-    public class SqLiteContext : DbContext
+    public class TimeTrackerContextSqLite : DbContext
     {
         // Your context has been configured to use a 'SqLiteContext' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
@@ -13,7 +13,7 @@ namespace TimeTrackerDataBaseSqlite
         // 
         // If you wish to target a different database and/or database provider, modify the 'SqLiteContext' 
         // connection string in the application configuration file.
-        public SqLiteContext()
+        public TimeTrackerContextSqLite()
             : base("name=SQLiteContext")
         {
         }
