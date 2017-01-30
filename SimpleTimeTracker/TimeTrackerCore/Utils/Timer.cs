@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using TimeTracker.Interface.Timer;
+using TimeTracker.Interface.Utils;
 
 namespace TimeTracker.Core.Utils
 {
@@ -12,23 +13,25 @@ namespace TimeTracker.Core.Utils
     {
         private long _elapsedTimeTicksTicks;
         private DateTime _startTime;
+		private IDateProvider _dateProvider;
 
         public event EventHandler TimeChanged;
         public event EventHandler TimerStarted;
         public event EventHandler TimerStopped;
 
-        public Timer() : base(1000)
-        {
-            this.AutoReset = true;
-            this.Elapsed += (sender, args) =>
-            {
-                _elapsedTimeTicksTicks = DateTime.Now.Ticks - _startTime.Ticks;
-                TimeChanged?.Invoke(this, EventArgs.Empty);
-            };
-        }
-
-		public Timer(int updateIntervalInMs) : base(updateIntervalInMs)
+		public Timer(int updateIntervalInMs, IDateProvider dateProvider) : base(updateIntervalInMs)
 		{
+			if (dateProvider == null)
+				throw new ArgumentNullException(nameof(dateProvider));
+			
+			_dateProvider = dateProvider;
+
+			AutoReset = true;
+			Elapsed += (sender, args) =>
+			{
+				_elapsedTimeTicksTicks = _dateProvider.Now().Ticks - _startTime.Ticks;
+				TimeChanged?.Invoke(this, EventArgs.Empty);
+			};
 		}
 
         public long ElapsedTimeTicks => _elapsedTimeTicksTicks;
@@ -37,15 +40,15 @@ namespace TimeTracker.Core.Utils
 
         public void Pause()
         {
-            TimerStopped?.Invoke(this,EventArgs.Empty);
-            base.Stop();
+			base.Stop();
+            TimerStopped?.Invoke(this,EventArgs.Empty); 
         }
 
         public new void Start()
         {
             base.Start();
             TimerStarted?.Invoke(this,EventArgs.Empty);
-            _startTime = DateTime.Now;
+			_startTime = _dateProvider.Now();
         }
 
         public new void Stop()

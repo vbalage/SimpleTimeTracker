@@ -49,6 +49,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils\TimerFactory.cs" />
+    <Compile Include="Utils\SimpleDateProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TimeTrackerInterfaces\TimeTrackerInterfaces.csproj">

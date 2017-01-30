@@ -33,6 +33,7 @@
   <ItemGroup>
     <Compile Include="Timer\TimerTests.cs" />
     <Compile Include="Task\TaskTests.cs" />
+    <Compile Include="Timer\DummyDateProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
