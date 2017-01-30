@@ -46,6 +46,7 @@
     <Compile Include="Timer\ITimer.cs" />
     <Compile Include="Timer\ITimerFactory.cs" />
     <Compile Include="Utils\IDateProvider.cs" />
+    <Compile Include="DataSources\IUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />

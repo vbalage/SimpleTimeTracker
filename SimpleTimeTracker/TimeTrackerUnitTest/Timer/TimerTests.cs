@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using NUnit.Framework;
 using TimeTracker.Core.Utils;
 
@@ -19,28 +18,29 @@ namespace TimeTrackerUnitTest
 			t = new TimeTracker.Core.Utils.Timer(timeResolutionInterval, new DummyDateProvider(myDate));
 		}
 
-		[Test()]
+		[Test]
 		public void TimerEventTest()
 		{
 			int startEventCalledCount = 0;
-			int endEventCalledCount = 0;
-			int timeChangedCounter = 0;
+			int endEventCalledCount   = 0;
+			int timeChangedCounter    = 0;
 
 			t.TimerStarted += (sender, e) => { startEventCalledCount++; };
 			t.TimerStopped += (sender, e) => { endEventCalledCount++; };
-			t.TimeChanged += (sender, e) => { timeChangedCounter++};
 
 			Assert.IsFalse(t.IsRunning);
 			t.Start();
 			Assert.IsTrue(t.IsRunning);
-			Thread.Sleep(100);
-			t.Stop();
-			Assert.IsFalse(t.IsRunning);
 
-			Assert.AreEqual(1, startEventCalledCount);
-			Assert.AreEqual(1, endEventCalledCount);
-
-
+			t.TimeChanged +=
+				(sender, e) =>
+					{
+						timeChangedCounter++;
+						t.Stop();
+						Assert.IsFalse(t.IsRunning);
+						Assert.AreEqual(1, startEventCalledCount, $"Start event called {startEventCalledCount} times.");
+						Assert.AreEqual(1, endEventCalledCount,   $"End event called {endEventCalledCount} times.");
+					};
 		}
 	}
 }

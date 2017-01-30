@@ -8,7 +8,7 @@ namespace TimeTracker.Core.DataTypes
     {
         public string Name { get; set; }       
 
-        public long Id { get; set; }
+        public Int32 Id { get; set; }
 
         public ICollection<ISession> Sessions { get; set; }
     }

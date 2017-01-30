@@ -1,9 +1,10 @@
 ﻿using System;
+using TimeTracker.Interface.DataTypes;
 
 namespace TimeTracker.Interface.DataTypes
 {
-    public interface IEntity
+    public interface IEntity<TKey>
     {
-        long Id { get; set; }
+        TKey Id { get; set; }
     }
 }

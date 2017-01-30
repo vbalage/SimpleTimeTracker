@@ -1,12 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Core.Metadata.Edm;
 using TimeTracker.Interface.DataSources;
 using TimeTracker.Interface.DataTypes;
 
 namespace TimeTrackerDataBaseSqlite.DataSources
 {
-    public abstract class GenericRepository<T> : IRepository<T> where T : class, IEntity
+    public abstract class GenericRepository<T> : IRepository<T, Int32> where T : class, IEntity
     {
         protected DbSet<T> DbSet;
 
@@ -22,7 +22,7 @@ namespace TimeTrackerDataBaseSqlite.DataSources
 
         public abstract void Delete(T entity);
 
-        public abstract T GetById(long id);
+		public abstract T GetById(long id);
 
         public abstract void Update(T entity);
     }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TimeTracker.Interface.DataSources;
 using TimeTracker.Interface.DataTypes;
 
@@ -18,8 +13,7 @@ namespace TimeTrackerDataBaseSqlite.DataSources
             _dbContext = new SqLiteContext();
         }
 
-        public IRepository<ISession> Sessions => new SessionRepository(_dbContext.Sessions);
-
-        public IRepository<ITask> Tasks => new TaskRepository(_dbContext.Tasks);
+        public IRepository<ISession, Int32> Sessions => new SessionRepository(_dbContext);
+        public IRepository<ITask, Int32> Tasks => new TaskRepository(_dbContext);
     }
 }

@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using TimeTracker.Interface.DataTypes;
 
 namespace TimeTracker.Interface.DataSources
 {
-    public interface IRepository<TEntity> where TEntity : IEntity
+    public interface IRepository<TEntity, TKey> where TEntity : class
     {
-        TEntity GetById(long id);
+        TEntity GetById(TKey id);
 
-        void Add(TEntity entity);
+		IEnumerable<TEntity> GetAll();
+
+        void Create(TEntity entity);
 
         void Delete(TEntity entity);
 

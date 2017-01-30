@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TimeTracker.Interface.DataTypes
 {
-    public interface ITask : IEntity
+    public interface ITask : IEntity<Int32>
     {
         string Name { get; set; }
 

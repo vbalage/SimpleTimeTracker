@@ -5,7 +5,7 @@ namespace TimeTracker.Core.DataTypes
 {
     public class Session : ISession
     {
-        public long Id { get; set; }
+        public Int32 Id { get; set; }
 
         public string Description { get; set; }
 
@@ -14,5 +14,6 @@ namespace TimeTracker.Core.DataTypes
         public DateTime StartTime { get; set; }
 
         public ITask ParentTask { get; set; }
-    }
+
+	}
 }
